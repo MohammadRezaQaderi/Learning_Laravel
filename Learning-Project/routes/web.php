@@ -34,5 +34,7 @@ Route::get('/Allah', function () {
         'base' => 'peper',
         'price' => 12
     ]];
-    return view('Services' ,['pizza' => $pizza]);
+
+    $name = request('name');
+    return view('Services' ,['pizza' => $pizza ,'name' => $name , 'age' =>request('age') ]);
 });

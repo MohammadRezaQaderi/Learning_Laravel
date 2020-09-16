@@ -7,6 +7,7 @@
                 <div class="m-b-md" style="color : white; font-size: 20px;">
                     Services
                 </div>
+                <p>{{ $name }} - {{ $age }}</p>
                 <!-- 
                 @for($i = 0 ; $i < count($pizza) ; $i++ )
                     <p>{{$pizza[$i]['type']}}</p>
