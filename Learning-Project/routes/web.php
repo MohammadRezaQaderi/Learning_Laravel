@@ -19,10 +19,20 @@ Route::get('/', function () {
 
 Route::get('/Allah', function () {
     // get the data from db
-    $pizza = [
+    $pizza = [[
         'type' => 'italian' ,
         'base' => 'chesey',
-        'price' => 10
-    ];
-    return view('Services' , $pizza );
+        'price' => 20
+    ],
+    [
+        'type' => 'iranian',
+        'base' => 'not hot',
+        'price' => 7
+    ],
+    [
+        'type' => 'chilian' ,
+        'base' => 'peper',
+        'price' => 12
+    ]];
+    return view('Services' ,['pizza' => $pizza]);
 });

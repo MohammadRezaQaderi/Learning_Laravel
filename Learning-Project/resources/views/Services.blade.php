@@ -28,23 +28,16 @@
                         <div class="m-b-md" style="color : white; font-size: 20px;">
                             Services
                         </div>
-                        <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
-                        @if($price > 15)
-                            <p>this pizza is expencive</p>
-                        @elseif($price < 5)
-                            <p>this pizza is cheap</p>
-                        @else
-                            <p>this pizza is normaly priced</p>
-                        @endif
-                        
-                        @unless($base == 'ali')
-                            <p>blobblobblob</p>
-                        @endunless
-
-                        @php
-                            $name = 'ali';
-                            echo($name);
-                        @endphp
+                        <!-- 
+                        @for($i = 0 ; $i < count($pizza) ; $i++ )
+                            <p>{{$pizza[$i]['type']}}</p>
+                        @endfor
+                        -->
+                        @foreach($pizza as $p)
+                            <div>
+                                {{$loop->index}}{{$p['type']}}</p>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
