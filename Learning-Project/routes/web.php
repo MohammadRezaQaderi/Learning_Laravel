@@ -38,3 +38,8 @@ Route::get('/Allah', function () {
     $name = request('name');
     return view('Services' ,['pizza' => $pizza ,'name' => $name , 'age' =>request('age') ]);
 });
+
+Route::get('/Allah/{id}', function($id){
+    //use the id to query the DB for record
+    return view('details' , ['id' => $id]);
+});
