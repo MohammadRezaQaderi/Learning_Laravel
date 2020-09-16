@@ -17,29 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Allah', function () {
-    // get the data from db
-    $pizza = [[
-        'type' => 'italian' ,
-        'base' => 'chesey',
-        'price' => 20
-    ],
-    [
-        'type' => 'iranian',
-        'base' => 'not hot',
-        'price' => 7
-    ],
-    [
-        'type' => 'chilian' ,
-        'base' => 'peper',
-        'price' => 12
-    ]];
-
-    $name = request('name');
-    return view('Services' ,['pizza' => $pizza ,'name' => $name , 'age' =>request('age') ]);
-});
-
-Route::get('/Allah/{id}', function($id){
-    //use the id to query the DB for record
-    return view('details' , ['id' => $id]);
-});
+Route::get('/Allah', 'App\Http\Controllers\PizzaController@index');
+Route::get('/Allah/{id}', 'App\Http\Controllers\PizzaController@show');
