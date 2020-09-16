@@ -29,6 +29,22 @@
                             Services
                         </div>
                         <p>{{ $type }} - {{ $base }} - {{ $price }}</p>
+                        @if($price > 15)
+                            <p>this pizza is expencive</p>
+                        @elseif($price < 5)
+                            <p>this pizza is cheap</p>
+                        @else
+                            <p>this pizza is normaly priced</p>
+                        @endif
+                        
+                        @unless($base == 'ali')
+                            <p>blobblobblob</p>
+                        @endunless
+
+                        @php
+                            $name = 'ali';
+                            echo($name);
+                        @endphp
                     </div>
                 </div>
             </div>
