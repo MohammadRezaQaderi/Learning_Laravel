@@ -7,15 +7,16 @@
                 <div class="m-b-md" style="color : white; font-size: 20px;">
                     Services
                 </div>
-                <p>{{ $name }} - {{ $age }}</p>
                 <!-- 
+                <p>{{ $name }} - {{ $age }}</p>
+
                 @for($i = 0 ; $i < count($pizza) ; $i++ )
                     <p>{{$pizza[$i]['type']}}</p>
                 @endfor
                 -->
-                @foreach($pizza as $p)
+                @foreach($pizzas as $p)
                     <div>
-                        {{$loop->index}}{{$p['type']}}</p>
+                        {{$p->name}} - {{$p->type}} - {{$p->base}}
                     </div>
                 @endforeach
             </div>
