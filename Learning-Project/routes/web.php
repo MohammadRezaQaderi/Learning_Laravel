@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,3 +19,10 @@ Route::get('/', function () {
 
 Route::get('/Allah', 'App\Http\Controllers\PizzaController@index');
 Route::get('/Allah/{id}', 'App\Http\Controllers\PizzaController@show');
+
+Route::get('/users/{name}/{id}' , function($name , $id){
+    return '<h1 style="text-align: center;">This is the users that name is  :<span style="color:blue;">'.$name.'</span>   and the id is  :<span style="color:red;">'.$id; 
+});
+
+Route::get('/about' , 'App\Http\Controllers\PizzaController@about');
+Route::get('/services' , 'App\Http\Controllers\PizzaController@services');

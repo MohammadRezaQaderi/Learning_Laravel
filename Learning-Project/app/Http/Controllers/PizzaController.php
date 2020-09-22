@@ -19,4 +19,13 @@ class PizzaController extends Controller
         //use the id to query the DB for record
         return view('details' , ['id' => $id]);
     }
+
+    public function about(){
+        return view('pages/about');
+    }
+
+    public function services(){
+        return view('pages/services');
+    }
+    
 }
