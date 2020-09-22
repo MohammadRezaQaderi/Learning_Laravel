@@ -5,10 +5,10 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="content">
                 <div class="m-b-md" style="color : white; font-size: 20px;">
-                    Services
+                   <span style="text-align: center"> Services </span>
                 </div>
                 @foreach($pizzas as $p)
-                    <div>
+                    <div style="text-align: center;">
                         {{$p->type}} - {{$p->base}} - {{$p->name}}
                     </div>
                 @endforeach
