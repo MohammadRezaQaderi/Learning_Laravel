@@ -1,12 +1,25 @@
 @extends('layouts.layout')
 @section('content')
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <div class="content">
-                <div class="m-b-md" style="color : white; font-size: 20px;">
-                    Add New Pizza
-                </div>
-            </div>
-     </div>
+<div class="warpper create-pizza">
+    <h1>Create New Pizza</h1>
+    <form action="/pizza" method="POST">
+        @csrf
+        <label for="name">Your name:</label>
+        <input type="text" id="name" name="name">
+        <label for="type">Choose Pizza type:</label>
+        <select name="type" id="type">
+            <option value="hawaiian">Hawaiian</option>
+            <option value="veg supreme">Veg Supreme</option>
+            <option value="volcano">volcano</option>
+        </select>
+        <label for="type">Choose Pizza base:</label>
+        <select name="base" id="base">
+            <option value="cheesy crust">Chessy Crust</option>
+            <option value="garlic crust">Garlic Crust</option>
+            <option value="thin & crispy">Thin & Crispy</option>
+            <option value="think">Thick</option>
+        </select>
+        <input type="submit" value="Order Pizza">
+    </form>
 </div>
 @endsection

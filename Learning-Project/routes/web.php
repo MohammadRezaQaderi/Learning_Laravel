@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/pizza', 'App\Http\Controllers\PizzaController@index');
 Route::get('/pizza/create' , 'App\Http\Controllers\PizzaController@create');
+Route::post('/pizza' , 'App\Http\Controllers\PizzaController@store');
 Route::get('/pizza/{id}', 'App\Http\Controllers\PizzaController@show');
 
 Route::get('/users/{name}/{id}' , function($name , $id){
