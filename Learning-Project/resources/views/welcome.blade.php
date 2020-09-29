@@ -112,6 +112,6 @@
             Build v{{ Illuminate\Foundation\Application::VERSION }}
         </div> -->
         <p class="massage" style="color: #5e2195">{{session('massage')}}</p><br>
-        <a href="/pizza/create" style="color: #5e2195">Order a Pizza</a>
+        <a href="{{route('pizza.create')}}" style="color: #5e2195">Order a Pizza</a>
     </div>
 @endsection
