@@ -111,7 +111,7 @@
         <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
             Build v{{ Illuminate\Foundation\Application::VERSION }}
         </div> -->
-
-        <a href="/pizza/create">Order a Pizza</a>
+        <p class="massage" style="color: white">{{session('massage')}}</p><br>
+        <a href="/pizza/create" style="color: white">Order a Pizza</a>
     </div>
 @endsection

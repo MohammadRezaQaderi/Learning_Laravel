@@ -39,6 +39,13 @@ class PizzaController extends Controller
         error_log(request('name'));
         error_log(request('type'));
         error_log(request('base'));
-        return redirect('/');
+        $pizza =  new Pizza();
+
+        $pizza->name = request('name');
+        $pizza->type = request('type');
+        $pizza->base = request('base');
+
+        $pizza->save();
+        return redirect('/')->with('massage' ,'Thank You For Your Order');
     }
 }
