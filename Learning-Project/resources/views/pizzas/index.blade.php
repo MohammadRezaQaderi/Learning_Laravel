@@ -4,7 +4,7 @@
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="content">
-                <div class="m-b-md" style="color : white; font-size: 20px;">
+                <div class="m-b-md">
                    <span style="text-align: center"> Services </span>
                 </div>
                 @foreach($pizzas as $p)

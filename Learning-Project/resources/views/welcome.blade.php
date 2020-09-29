@@ -5,7 +5,7 @@
     <img src="/img/a1.jpg" alt="baby" style="width: 360px; height: 580px;">
     </div>
 
-    <div class="titel" style="position:relative; top: 300px ; right: 340px;">
+    <div class="title" >
         The Beautiful and Hot babe
     </div>
     <!--  @if (Route::has('login'))
@@ -111,7 +111,7 @@
         <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
             Build v{{ Illuminate\Foundation\Application::VERSION }}
         </div> -->
-        <p class="massage" style="color: white">{{session('massage')}}</p><br>
-        <a href="/pizza/create" style="color: white">Order a Pizza</a>
+        <p class="massage" style="color: #5e2195">{{session('massage')}}</p><br>
+        <a href="/pizza/create" style="color: #5e2195">Order a Pizza</a>
     </div>
 @endsection
