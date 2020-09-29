@@ -95,6 +95,10 @@ html, body {
       border: 0;
       margin-top: 20px;
     }
+    
+    fieldset{
+      border: 0;
+    }
   
   }
   
@@ -135,7 +139,8 @@ html, body {
       padding: 12px;
       background: #f4f4f4;
       img{
-        width: 60px;
+        height: 5px;
+        width: 5px;
         display: inline-block;
       }
       h4{

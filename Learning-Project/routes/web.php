@@ -18,16 +18,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pizza', 'App\Http\Controllers\PizzaController@index');
+Route::get('/pizza', 'App\Http\Controllers\PizzaController@index')->middleware('auth');
 Route::get('/pizza/create' , 'App\Http\Controllers\PizzaController@create');
 Route::post('/pizza' , 'App\Http\Controllers\PizzaController@store');
-Route::get('/pizza/{id}', 'App\Http\Controllers\PizzaController@show');
-Route::delete('/pizza/{id}' , 'App\Http\Controllers\PizzaController@destroy');
+Route::get('/pizza/{id}', 'App\Http\Controllers\PizzaController@show')->middleware('auth');
+Route::delete('/pizza/{id}' , 'App\Http\Controllers\PizzaController@destroy')->middleware('auth');
 
 Route::get('/users/{name}/{id}' , function($name , $id){
     return '<h1 style="text-align: center;">This is the users that name is  :<span style="color:blue;">'.$name.'</span>   and the id is  :<span style="color:red;">'.$id; 
-});
+})->middleware('auth');
 
 Route::get('/about' , 'App\Http\Controllers\PizzaController@about');
 Route::get('/services' , 'App\Http\Controllers\PizzaController@services');
 
+
+Auth::routes([
+    'register' =>false
+]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
