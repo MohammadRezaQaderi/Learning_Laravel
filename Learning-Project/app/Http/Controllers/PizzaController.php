@@ -29,7 +29,7 @@ class PizzaController extends Controller
     public function services(){
         return view('pages.services');
     }
-    
+
     public function create(){
         return view('pizzas.create');
     }

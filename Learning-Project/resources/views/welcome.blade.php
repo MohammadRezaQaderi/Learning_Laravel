@@ -2,11 +2,11 @@
 @section('content')
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
     <div >
-    <img src="/img/a1.jpg" alt="baby" style="width: 360px; height: 580px;">
+    <img src="/img/a1.jpg" alt="img" >
     </div>
 
     <div class="title" >
-        The Beautiful and Hot babe
+        What Kind of Food That You Like!!
     </div>
     <!--  @if (Route::has('login'))
     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -112,6 +112,7 @@
             Build v{{ Illuminate\Foundation\Application::VERSION }}
         </div> -->
         <p class="massage" style="color: #5e2195">{{session('massage')}}</p><br>
-        <a href="{{route('pizza.create')}}" style="color: #5e2195">Order a Pizza</a>
+        <a href="{{route('pizza.create')}}" style="color: #5e2195">Order a Pizza</a><br>
+        <a href="/order" style="color: #5e2195"> OOOOOOOOOORRRRRRRRRRRDDDDDDDDDDEEEEEEERRRRRR</a>
     </div>
 @endsection
