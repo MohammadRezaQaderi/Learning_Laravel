@@ -46,4 +46,5 @@ class KebabController extends Controller
         $kababs->delete();
 
         return redirect('/order/kebab');
-    }}
+    }
+}
