@@ -27,6 +27,11 @@ Route::post('/order/pizza' , 'App\Http\Controllers\PizzaController@store')->name
 Route::get('/order/pizza/{id}', 'App\Http\Controllers\PizzaController@show')->name('pizza.show')->middleware('auth');
 Route::delete('/order/pizza/{id}' , 'App\Http\Controllers\PizzaController@destroy')->name('pizza.destroy')->middleware('auth');
 
+Route::get('/order/kebab', 'App\Http\Controllers\KebabController@index')->name('kebab.index')->middleware('auth');
+Route::get('/order/kebab/create' , 'App\Http\Controllers\KebabController@create')->name('kebab.create');
+Route::post('/order/kebab' , 'App\Http\Controllers\KebabController@store')->name('kebab.store');
+Route::get('/order/kebab/{id}', 'App\Http\Controllers\KebabController@show')->name('kebab.show')->middleware('auth');
+Route::delete('/order/kebab/{id}' , 'App\Http\Controllers\KebabController@destroy')->name('kebab.destroy')->middleware('auth');
 
 Route::get('/users/{name}/{id}' , function($name , $id){
     return '<h1 style="text-align: center;">This is the users that name is  :<span style="color:blue;">'.$name.'</span>   and the id is  :<span style="color:red;">'.$id; 
