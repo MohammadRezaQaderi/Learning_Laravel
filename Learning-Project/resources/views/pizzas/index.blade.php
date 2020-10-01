@@ -8,5 +8,6 @@
         <h4><a href="{{route('pizza.show' , $p->id)}}"> {{$p->name}} </a></h4>
         </div>
     @endforeach
+    <a href="{{route('pizza.create')}}" class="back">Create Pizza Order</a>
 </div>
 @endsection

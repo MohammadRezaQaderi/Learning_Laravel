@@ -2,7 +2,7 @@
 @section('content')
 <div class="warpper create-pizza">
     <h1>Create New Kebab Order</h1>
-    <form action="/kebab" method="POST">
+    <form action="/order/kebab" method="POST">
         @csrf
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">
@@ -14,10 +14,9 @@
         </select>
         <label for="type">Choose kebab base:</label>
         <select name="base" id="base">
-            <option value="cheesy crust">Chessy Crust</option>
-            <option value="garlic crust">Garlic Crust</option>
-            <option value="thin & crispy">Thin & Crispy</option>
-            <option value="think">Thick</option>
+            <option value="ab dar">Ab Dar</option>
+            <option value="maghz pokht">Maghz Pokht</option>
+            <option value="zaferoni">Zaeferoni</option>
         </select>
         <fieldset>
             <label>Extra toppings:</label><br>

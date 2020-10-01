@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="warpper create-pizza">
-    <h1>Create New Pizza</h1>
-    <form action="/pizza" method="POST">
+<div class="warpper create-pizza" >
+    <h1>Create New Pizza Order</h1>
+    <form action="/order/pizza" method="POST">
         @csrf
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">

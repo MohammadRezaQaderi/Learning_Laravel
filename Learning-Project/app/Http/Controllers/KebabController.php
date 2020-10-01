@@ -38,12 +38,12 @@ class KebabController extends Controller
         $kababs->toppings = request('toppings');
 
         $kababs->save();
-        return redirect('/')->with('massage' ,'Thank You For Your Order');
+        return redirect('/order/kebab')->with('massage' ,'Thank You For Your Order');
     }
 
     public function destroy($id){
         $kababs = Kebab::findOrFail($id);
         $kababs->delete();
 
-        return redirect('/kebabs');
+        return redirect('/order/kebab');
     }}

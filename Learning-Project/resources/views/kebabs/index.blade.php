@@ -8,5 +8,6 @@
         <h4><a href="{{route('kebab.show' , $k->id)}}"> {{$k->name}} </a></h4>
         </div>
     @endforeach
+    <a href="{{route('kebab.create')}}" class="back">Create Kebab Order</a>    
 </div>
 @endsection

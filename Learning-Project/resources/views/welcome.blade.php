@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-    <div >
+    <div style="text-align:center;">
     <img src="/img/a1.jpg" alt="img" >
     </div>
 
-    <div class="title" >
-        What Kind of Food That You Like!!
+    <div class="title"  style="text-align:center;">
+        What Kind of Food That You Like?!
     </div>
     <!--  @if (Route::has('login'))
     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -111,8 +111,9 @@
         <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
             Build v{{ Illuminate\Foundation\Application::VERSION }}
         </div> -->
+        <div style="text-align: center;">
         <p class="massage" style="color: #5e2195">{{session('massage')}}</p><br>
-        <a href="{{route('pizza.create')}}" style="color: #5e2195">Order a Pizza</a><br>
-        <a href="/order" style="color: #5e2195"> OOOOOOOOOORRRRRRRRRRRDDDDDDDDDDEEEEEEERRRRRR</a>
+        <button style="width: 125px; height:40px;border-radius: 5px;background-color: #5e2195; "><a href="{{route('order')}}" style="color:white">Make A Order</a></button><br>
+        </div>
     </div>
 @endsection

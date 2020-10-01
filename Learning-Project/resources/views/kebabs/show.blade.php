@@ -7,7 +7,7 @@
         <p class="toppings">Extra Toppings:</p>
         <ul>
             @foreach ($kebab->toppings as $topping)
-                <li>{{$kebab}}</li>
+                <li>{{$topping}}</li>
             @endforeach
         </ul>
         <form action="{{route('kebab.destroy' , $kebab->id)}}" method="POST">
