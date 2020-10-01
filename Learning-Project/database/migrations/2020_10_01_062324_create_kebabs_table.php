@@ -16,6 +16,10 @@ class CreateKebabsTable extends Migration
         Schema::create('kebabs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('type');
+            $table->string('base');
+            $table->string('name');
+            $table->json('toppings');
         });
     }
 

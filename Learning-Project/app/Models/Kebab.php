@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kebab extends Model
 {
-    use HasFactory;
+    protected $casts = [
+        'toppings' => 'array'
+    ];
 }
