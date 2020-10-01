@@ -9,5 +9,6 @@
         </div>
     @endforeach
     <a href="{{route('pizza.create')}}" class="back">Create Pizza Order</a>
+    <a href="{{route('order')}}" class="back">Order</a>
 </div>
 @endsection

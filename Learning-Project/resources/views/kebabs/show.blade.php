@@ -10,11 +10,13 @@
                 <li>{{$topping}}</li>
             @endforeach
         </ul>
+        @if (Auth::user()-> name == $kebab-> name)
         <form action="{{route('kebab.destroy' , $kebab->id)}}" method="POST">
             @csrf
             @method('DELETE')
             <button>Delete Order</button>
         </form>
+        @endif
         <a href="{{route('kebab.index')}}" class="back">Back to all Kebabs</a>    
     </div>
 @endsection
