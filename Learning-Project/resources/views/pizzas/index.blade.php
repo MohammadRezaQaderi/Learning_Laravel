@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="warpper pizza-index">
-    <h1>Pizza Order</h1>
+    <h1>Pizza Orders</h1>
     @foreach($pizzas as $p)
         <div style="text-align: center;">
         <img src="/img/pizzaicon.png" alt="pizza icon" style="height: 50px; width: 50px;" > 

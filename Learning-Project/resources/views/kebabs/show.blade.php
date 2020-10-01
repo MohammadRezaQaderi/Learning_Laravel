@@ -1,20 +1,20 @@
 @extends('layouts.app')
 @section('content')
     <div class="warpper pizza-details">
-        <h1>Order of {{$pizza -> name}}</h1>
-        <p class="type">Type - {{  $pizza -> type}}</p>
-        <p class="base">Base - {{  $pizza -> base}}</p>    
+        <h1>Order of {{$kebab -> name}}</h1>
+        <p class="type">Type - {{  $kebab -> type}}</p>
+        <p class="base">Base - {{  $kebab -> base}}</p>    
         <p class="toppings">Extra Toppings:</p>
         <ul>
-            @foreach ($pizza->toppings as $topping)
-                <li>{{$topping}}</li>
+            @foreach ($kebab->toppings as $topping)
+                <li>{{$kebab}}</li>
             @endforeach
         </ul>
-        <form action="{{route('pizza.destroy' , $pizza->id)}}" method="POST">
+        <form action="{{route('kebab.destroy' , $kebab->id)}}" method="POST">
             @csrf
             @method('DELETE')
             <button>Delete Order</button>
         </form>
-        <a href="{{route('pizza.index')}}" class="back">Back to all Pizzas</a>    
+        <a href="{{route('kebab.index')}}" class="back">Back to all Kebabs</a>    
     </div>
 @endsection
