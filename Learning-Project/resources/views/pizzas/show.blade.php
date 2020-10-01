@@ -15,6 +15,6 @@
             @method('DELETE')
             <button>Delete Order</button>
         </form>
-        <a href="/pizza" class="back">Back to all Pizzas</a>    
+        <a href="{{route('pizza.index')}}" class="back">Back to all Pizzas</a>    
     </div>
 @endsection
